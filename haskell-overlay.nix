@@ -17,7 +17,7 @@ final: prev:
       overrides = hpFinal: hpPrev:
         let
           hakyll-src = hpPrev.callHackage "hakyll" "4.14.0.0" {};
-          pandoc-src = hpPrev.callHackage "pandoc" "2.11.4" {}; # version specified by hayll 4.14.0.0
+          pandoc-src = hpPrev.callHackage "pandoc" "2.11.4" {}; # version specified by hakyll 4.14.0.0
           slugger-src = hpPrev.callHackageDirect {
             pkg = "slugger";
             ver = "0.1.0.1";
