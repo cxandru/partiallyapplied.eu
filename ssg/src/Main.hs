@@ -32,7 +32,6 @@ config :: Configuration
 config =
   defaultConfiguration
     { destinationDirectory = "dist"
-    , ignoreFile = const False
     , previewHost = "127.0.0.1"
     , previewPort = 8000
     , providerDirectory = "src"
