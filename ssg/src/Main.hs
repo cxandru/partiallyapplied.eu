@@ -22,11 +22,11 @@ import Text.Pandoc.Highlighting (Style, breezeDark, styleToCss)
 
 root :: String
 root =
-  "https://my-site.com"
+  "http://blog.partiallyapplied.eu"
 
 siteName :: String
 siteName =
-  "My Site Name"
+  "Partially Applied"
 
 config :: Configuration
 config =
@@ -214,10 +214,10 @@ feedCompiler renderer =
 feedConfiguration :: FeedConfiguration
 feedConfiguration =
   FeedConfiguration
-    { feedTitle = "My Site"
-    , feedDescription = "My Site Description"
-    , feedAuthorName = "My Name"
-    , feedAuthorEmail = "me@myemail.com"
+    { feedTitle = "Partially Applied"
+    , feedDescription = "cxandru's blog about Haskell, Nix, Emacs or Life"
+    , feedAuthorName = "cxandru"
+    , feedAuthorEmail = "g.cassian.alexandru@posteo.eu"
     , feedRoot = root
     }
 

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+$if(lang)$
 <html lang="$lang$">
+$else$
+<html lang="en">
+$endif$
   <head>
     <title>$title$</title>
 
@@ -44,6 +48,5 @@
   </head>
   <body>
     $body$
-    <script async src="./js/script.js"></script>
   </body>
 </html>
