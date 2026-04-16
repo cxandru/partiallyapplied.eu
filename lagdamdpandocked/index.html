@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title></title><link rel="stylesheet" href="Agda.css"></head><body>
+<pre class="Agda"><a id="5" class="Symbol">{-#</a> <a id="9" class="Keyword">OPTIONS</a> <a id="17" class="Pragma">--cubical</a> <a id="27" class="Pragma">--guardedness</a> <a id="41" class="Symbol">#-}</a>
+<a id="45" class="Keyword">module</a> <a id="52" href="index.html" class="Module">index</a> <a id="58" class="Keyword">where</a>
+</pre>
+<h1
+id="intrinsically-correct-algorithms-and-recursive-coalgebras">Intrinsically
+Correct Algorithms and Recursive Coalgebras</h1>
+<code>agda-stdlib</code> things ported to <code>cubical</code>, glue
+code:
+<pre class="Agda"><a id="186" class="Keyword">import</a> <a id="193" href="InductOn.html" class="Module">InductOn</a>
+<a id="202" class="Keyword">import</a> <a id="209" href="StdLibNatOrderIsCubicalWF.html" class="Module">StdLibNatOrderIsCubicalWF</a>
+</pre>
+Utilities, mostly for working in the category <code>A → Type</code>:
+<pre class="Agda"><a id="301" class="Keyword">import</a> <a id="308" href="Util.html" class="Module">Util</a>
+<a id="313" class="Keyword">import</a> <a id="320" href="Plain-Utils.html" class="Module">Plain-Utils</a> <a id="332" class="Comment">-- utils for both cubical and non-cubical agda</a>
+<a id="379" class="Keyword">import</a> <a id="386" href="ListNonEmptyDecompositions.html" class="Module">ListNonEmptyDecompositions</a> <a id="413" class="Comment">-- decompositions of nonempty lists into two lists</a>
+<a id="464" class="Keyword">import</a> <a id="471" href="AllInhabitants.html" class="Module">AllInhabitants</a> <a id="486" class="Comment">-- reasoning about all inhabitants of a (unary) predicate</a>
+</pre>
+The formalization of the main theorem:
+<pre class="Agda"><a id="591" class="Keyword">import</a> <a id="598" href="Paper.html" class="Module">Paper</a>
+</pre>
+Definitions that were needed and missing from the cubical library – will
+be upstreamed:
+<pre class="Agda"><a id="700" class="Keyword">import</a> <a id="707" href="Cubical.Categories.Functor.Algebra.html" class="Module">Cubical.Categories.Functor.Algebra</a>
+<a id="742" class="Keyword">import</a> <a id="749" href="Cubical.Categories.Functor.RecursiveCoalgebra.html" class="Module">Cubical.Categories.Functor.RecursiveCoalgebra</a>
+<a id="795" class="Keyword">import</a> <a id="802" href="Cubical.Categories.Functor.Coalgebra.html" class="Module">Cubical.Categories.Functor.Coalgebra</a>
+</pre>
+The main library module:
+<pre class="Agda"><a id="872" class="Keyword">import</a> <a id="879" href="IntrinsicallyRecursiveCoalgs.html" class="Module">IntrinsicallyRecursiveCoalgs</a>
+</pre>
+<h2 id="applications">Applications</h2>
+Intrinsically correct Euclidian (GCD) Algorithm as a
+coalgebra-to-algebra morphism for a recursive coalgebra:
+<pre class="Agda"><a id="1044" class="Keyword">import</a> <a id="1051" href="GCD.html" class="Module">GCD</a>
+</pre>
+Intrinsically correct Quicksort as a coalgebra-to-algebra morphism for a
+recursive coalgebra:
+<pre class="Agda"><a id="1157" class="Keyword">import</a> <a id="1164" href="QuickSort.QuickSort.html" class="Module">QuickSort.QuickSort</a>
+</pre>
+Definition and Semantics of Grammars:
+<pre class="Agda"><a id="1230" class="Keyword">import</a> <a id="1237" href="Context-Free-CNF-Grammar.html" class="Module">Context-Free-CNF-Grammar</a>
+</pre>
+The CYK algorithm:
+<pre class="Agda"><a id="1289" class="Keyword">import</a> <a id="1296" href="CYK.html" class="Module">CYK</a>
+</pre>
+<h2 id="index-of-formalized-results">Index of Formalized results</h2>
+<pre class="Agda"><a id="Definition-2,2"></a><a id="1341" href="index.html#1341" class="Function">Definition-2,2</a> <a id="1356" class="Symbol">=</a> <a id="1358" href="Cubical.Categories.Functor.RecursiveCoalgebra.html#1394" class="Function">Cubical.Categories.Functor.RecursiveCoalgebra.isRecursive</a>
+</pre>
+<pre class="Agda"><a id="Theorem-2,12"></a><a id="1425" href="index.html#1425" class="Function">Theorem-2,12</a> <a id="1438" class="Symbol">=</a> <a id="1440" href="QuickSort.QuickSort.html#9743" class="Function">QuickSort.QuickSort.quickSort</a>
+</pre>
+<pre class="Agda"><a id="Theorem-3,7,[1]"></a><a id="1479" href="index.html#1479" class="Function">Theorem-3,7,[1]</a> <a id="1495" class="Symbol">=</a> <a id="1497" href="Paper.html#1851" class="Function">Paper.F-wf⇒F-coalgs-recursive</a>
+</pre>
+<pre class="Agda"><a id="Example-3,9"></a><a id="1536" href="index.html#1536" class="Function">Example-3,9</a> <a id="1548" class="Symbol">=</a> <a id="1550" href="QuickSort.QuickSort.html#8417" class="Function">QuickSort.QuickSort.QuickSortFunctorWellfounded</a>
+</pre>
+<h2 id="section">§4.1</h2>
+<pre class="Agda"><a id="Definition-4,6"></a><a id="1616" href="index.html#1616" class="Function">Definition-4,6</a> <a id="1631" class="Symbol">=</a> <a id="1633" href="IntrinsicallyRecursiveCoalgs.html#1060" class="Function">IntrinsicallyRecursiveCoalgs.J&lt;</a>
+</pre>
+<pre class="Agda"><a id="LibraryStage1"></a><a id="1674" href="index.html#1674" class="Function">LibraryStage1</a> <a id="1688" class="Symbol">=</a> <a id="1690" href="IntrinsicallyRecursiveCoalgs.html#6920" class="Function">IntrinsicallyRecursiveCoalgs.c2a.c2a-morph-Definition.c2a-morph</a>
+</pre>
+<pre class="Agda"><a id="LibraryStage2"></a><a id="1763" href="index.html#1763" class="Function">LibraryStage2</a> <a id="1777" class="Symbol">=</a> <a id="1779" href="IntrinsicallyRecursiveCoalgs.html#7550" class="Function">IntrinsicallyRecursiveCoalgs.c2a.c2a-morph-Definition.c2a.is-c2a-morph</a>
+</pre>
+<pre class="Agda"><a id="LibraryStage3"></a><a id="1859" href="index.html#1859" class="Function">LibraryStage3</a> <a id="1873" class="Symbol">=</a> <a id="1875" href="IntrinsicallyRecursiveCoalgs.html#9460" class="Function">IntrinsicallyRecursiveCoalgs.c2a.c2a-morph-Definition.c2a.unique.unique</a>
+</pre>
+<pre class="Agda"><a id="Section-4,1"></a><a id="1956" href="index.html#1956" class="Function">Section-4,1</a> <a id="1968" class="Symbol">=</a> <a id="1970" href="QuickSort.QuickSort.html#9743" class="Function">QuickSort.QuickSort.quickSort</a> <a id="2000" class="Comment">-- intrinsically correct Quicksort as a coalgebra-to-algebra morphism</a>
+</pre>
+<h2 id="euclidian-algorithm">§6.1 Euclidian Algorithm</h2>
+<pre class="Agda"><a id="GCD-Coalgebra-carrier"></a><a id="2108" href="index.html#2108" class="Function">GCD-Coalgebra-carrier</a> <a id="2130" class="Symbol">=</a> <a id="2132" href="GCD.html#874" class="Function">GCD.C</a>
+</pre>
+<pre class="Agda"><a id="GCD-Algebra-carrier"></a><a id="2147" href="index.html#2147" class="Function">GCD-Algebra-carrier</a> <a id="2167" class="Symbol">=</a> <a id="2169" href="GCD.html#1184" class="Function">GCD.A</a>
+</pre>
+<pre class="Agda"><a id="Observation-6,1"></a><a id="2184" href="index.html#2184" class="Function">Observation-6,1</a> <a id="2200" class="Symbol">=</a> <a id="2202" href="GCD.html#1412" class="Function">GCD.observation</a>
+</pre>
+<pre class="Agda"><a id="GCD-𝐺"></a><a id="2227" href="index.html#2227" class="Function">GCD-𝐺</a> <a id="2233" class="Symbol">=</a> <a id="2235" href="GCD.html#1653" class="Datatype">GCD.G</a> <a id="2241" class="Comment">-- In the formalization, the proposition `𝑎 &gt; 𝑏` is an explicit parameter of `inr`</a>
+</pre>
+<pre class="Agda"><a id="2333" class="Comment">-- GCD-Relation = GCD.&lt;₂-wellFounded -- this is private, so we can&#39;t link it here</a>
+</pre>
+<pre class="Agda"><a id="Lemma-6,2"></a><a id="2424" href="index.html#2424" class="Function">Lemma-6,2</a> <a id="2434" class="Symbol">=</a> <a id="2436" href="GCD.html#2775" class="Function">GCD.G-ε⁻¹</a> <a id="2446" class="Comment">-- witnesses the well foundedness</a>
+</pre>
+<pre class="Agda"><a id="GCD-coalgebra"></a><a id="2489" href="index.html#2489" class="Function">GCD-coalgebra</a> <a id="2503" class="Symbol">=</a> <a id="2505" href="GCD.html#2910" class="Function">GCD.coalg</a>
+</pre>
+<pre class="Agda"><a id="Lemma-6,3"></a><a id="2524" href="index.html#2524" class="Function">Lemma-6,3</a> <a id="2534" class="Symbol">=</a> <a id="2536" href="GCD.html#3242" class="Function">GCD.alg</a>
+</pre>
+<pre class="Agda"><a id="Theorem-6,4"></a><a id="2553" href="index.html#2553" class="Function">Theorem-6,4</a> <a id="2565" class="Symbol">=</a> <a id="2567" href="GCD.html#4171" class="Function">GCD.gcd</a>
+</pre>
+<h2 id="cyk-parsing">§6.2 CYK Parsing</h2>
+<pre class="Agda"><a id="2604" class="Keyword">module</a> <a id="CNF-Semantics"></a><a id="2611" href="index.html#2611" class="Module">CNF-Semantics</a> <a id="2625" class="Symbol">=</a> <a id="2627" href="Context-Free-CNF-Grammar.html#1281" class="Module">Context-Free-CNF-Grammar.Semantics</a>
+</pre>
+<pre class="Agda"><a id="CYK-C,A"></a><a id="2671" href="index.html#2671" class="Function">CYK-C,A</a> <a id="2679" class="Symbol">=</a> <a id="2681" href="CYK.html#1860" class="Function">CYK.A</a>  <a id="2688" class="Comment">-- The definitions of both 𝐶 and 𝐴</a>
+</pre>
+<pre class="Agda"><a id="CYK-𝐺"></a><a id="2732" href="index.html#2732" class="Function">CYK-𝐺</a> <a id="2738" class="Symbol">=</a> <a id="2740" href="CYK.html#1936" class="Function">CYK.F₀</a> <a id="2747" class="Comment">-- see also CYK.F₁</a>
+</pre>
+<pre class="Agda"><a id="CYK-coalgebra"></a><a id="2775" href="index.html#2775" class="Function">CYK-coalgebra</a> <a id="2789" class="Symbol">=</a> <a id="2791" href="CYK.html#2341" class="Function">CYK.coalg</a>
+</pre>
+<pre class="Agda"><a id="Lemma-6,6"></a><a id="2810" href="index.html#2810" class="Function">Lemma-6,6</a> <a id="2820" class="Symbol">=</a> <a id="2822" href="CYK.html#2454" class="Function">CYK.alg</a> <a id="2830" class="Comment">-- Both the Definition of the algebra and the correctness proof</a>
+</pre>
+<pre class="Agda"><a id="Theorem-6,7"></a><a id="2903" href="index.html#2903" class="Function">Theorem-6,7</a> <a id="2915" class="Symbol">=</a> <a id="2917" href="CYK.html#5648" class="Function">CYK.CYK</a>
+</pre>
+<p>The morphism arises from the morphism <code>ε⁻¹</code> . We do not
+obtain any property about structure preservation, but do not need that
+because any morphism <code>𝐶 → 𝐴</code> is sufficient by Observation
+6.5</p>
+</body></html>
